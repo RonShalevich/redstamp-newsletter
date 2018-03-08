@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "TiemposText";
+  src: url('../fonts/Tiempos Text/TiemposText-Regular.otf') format("truetype");
+}
+@font-face {
+  font-family: "AlrightSansLT";
+  src: url('../fonts/Alright Sans/AlrightSans-Regular.otf');
+}
+.newsletter {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid lightgrey;
+}
+table {
+  width: 100%;
+}
+.logo {
+  float: left;
+  margin-bottom: 1em;
+}
+.header-image {
+  margin-top: 1.5em;
+}
+.header{
+  width: 90%;
+  margin: auto;
+  padding-top: 1em;
+}
+.view {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  font-family: "AlrightSansLT";
+  font-size: 10px;
+  float: right;
+  margin-bottom: 1em;
+  color: #ec5447;
+}
+.title {
+  font-family: "TiemposText";
+  font-size: 44px;
+  letter-spacing: -0.4px;
+  line-height: 1.02;
+  color: #0a273c;
+  text-align: left;
+}
+.subtitle {
+  font-family: "AlrightSansLT";
+  width: 85%;
+  line-height: 1.21;
+  font-size: 14px;
+  text-align: left;
+  color: #85939e;
+
+}
+.newletter-image {
+  width: auto;
+  float: right;
+  object-fit: contain;
+}
+.Bitmap {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.main {
+  width: 100%;
+  background-color: #f7f8f9;
+}
+.content {
+  width: 90%;
+  margin: auto;
+
+}
+.traction {
+  font-family: "AlrightSansLT";
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 1.5em;
+  width: 100%;
+  color: #60cbe2;
+}
+.dash {
+  vertical-align: top;
+  width: 50%;
+  height: 1px;
+  opacity: 0.47;
+  background-color: #85939e;
+  margin-left: 2em;
+}
+.invisa-dash {
+  vertical-align: top;
+  width: 50%;
+  height: 1px;
+  opacity: 0.47;
+  background-color: #ffffff;
+  /* background-color: red; */
+  margin-left: 2em;
+}
+.conference {
+  font-family: "TiemposHeadline";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  color: #0a273c;
+  margin-left: 1em;
+}
+.traction-table {
+  width: 100%;
+  margin-left: 1.8em;
+}
+.traction-content {
+  width: 80%;
+  opacity: 0.73;
+  font-family: AlrightSansLT;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: -0.1px;
+  text-align: left;
+  margin-left: 1.5em;
+  color: #0a273c;
+}
+.style-1 {
+  color: #ec5447;
+}
+.first-container {
+  background-color: #ffffff;
+}
+.tips-title {
+    font-family: TiemposText;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: #0a273c;
+}
+.tips-subtitle {
+  font-family: AlrightSansLT;
+  font-size: 14px;
+  text-align: center;
+  margin-top:-1em;
+  margin-bottom: 2em;
+  color: #0a273c;
+}
+.tips-content {
+  width: 90%;
+  margin: auto;
+  background-color: #ffffff;
+  border: solid 1px #eceef0;
+}
+.tips-content-title {
+  width: 75%;
+  font-family: "AlrightSansLT";
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #0a273c;
+}
+.tips-content-content{
+  width: 75%;
+  font-family: "AlrightSansLT";
+  font-size: 12px;
+  text-align: left;
+  color: #85939e;
+}
+.more {
+  font-family: "AlrightSansLT";
+  font-size: 10px;
+  font-weight: 500;
+  text-align: left;
+  color: #60cbe2;
+}
+.blog-title {
+  font-family: "TiemposText";
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  color: #0a273c;
+}
+.blog-subtitle {
+  font-family: "AlrightSansLT";
+  font-size: 14px;
+  text-align: center;
+  color: #0a273c;
+}
+.line {
+  width: 100%;
+  border: solid 1px #eceef0
+}
+.blog-cell {
+  width: 82%;
+  margin-left: 1.6em;
+  background-color: #ffffff;
+  border: solid 1px #eceef0;
+}
+.blog-post-title {
+  font-family: "TiemposHeadline";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.38;
+  text-align: left;
+  padding-left: 0.8em;
+  color: #0a273c;
+}
+.blog-post-content {
+  opacity: 0.73;
+  font-family: "AlrightSansLT";
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #0a273c;
+}
+.devider {
+  width: 100%;
+  height: 50px;
+  background-color: #ec5447;
+  }
+  .devider-text {
+  width: 100%;
+  height: 19px;
+  font-family: "AlrightSansLT";
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  padding-top: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  }
+  .made {
+  height: 18px;
+  opacity: 0.5;
+  font-family: "AlrightSansLT";
+  font-size: 14px;
+  text-align: left;
+  color: #85939e;
+  font-weight: bold;
+}
+.social {
+  margin-left: 5em;
+}
+.footer-text1 {
+  height: 16px;
+  font-family: "AlrightSansLT";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-align: right;
+  margin-right: 1em;
+  color: #0a273c;
+  letter-spacing: normal;
+}
+.footer-text2 {
+  height: 16px;
+  font-family: "AlrightSansLT";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #0a273c;
+  letter-spacing: normal;
+}
+.copyright {
+  height: 16px;
+  opacity: 0.5;
+  font-family: "AlrightSansLT";
+  font-size: 12px;
+  text-align: center;
+  color: #85939e;
+}
+.copyright-img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.wrapper {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.li {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+/* @import "compass/css3"; */
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: #ffffff;
+  width: 240px;
+  margin-top: 10px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+.flex-social {
+  background: #f7f8f9;
+  width: 240px;
+  margin-top: 10px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+.left {
+  margin-top: 0;
+}
+
+#circle:hover {
+  fill: blue;
+  stroke: lightblue;
+  stroke-width: 1px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: -125;
+  stroke-linecap: butt;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
