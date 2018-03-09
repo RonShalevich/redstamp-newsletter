@@ -6,34 +6,49 @@
   font-family: "AlrightSansLT";
   src: url('../fonts/Alright Sans/AlrightSans-Regular.otf');
 }
-@media screen and (min-width:616px){
-
-.newsletter {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-  border: 1px solid lightgrey;
+@media screen and (min-width:496px){
+  .newsletter {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid lightgrey;
+  }
+  .logo {
+    float: left;
+    margin-bottom: 1em;
+  }
+  .view {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-family: "AlrightSansLT";
+    font-size: 10px;
+    float: right;
+    margin-bottom: 1em;
+    color: #ec5447;
+  }
+  .title {
+    font-family: "TiemposText";
+    font-size: 44px;
+    letter-spacing: -0.4px;
+    line-height: 1.02;
+    color: #0a273c;
+    text-align: left;
+  }
+  .subtitle {
+    font-family: "AlrightSansLT";
+    width: 85%;
+    line-height: 1.21;
+    font-size: 14px;
+    text-align: left;
+    color: #85939e;
+  }
 }
-.logo {
-  float: left;
-  margin-bottom: 1em;
-}
-.view {
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  font-family: "AlrightSansLT";
-  font-size: 10px;
-  float: right;
-  margin-bottom: 1em;
-  color: #ec5447;
-}
-
-
-}
-@media screen and (max-width:615px){
+@media screen and (max-width:495px){
   .newsletter {
     width: 100%;
+    margin: auto;
+    border: 1px solid lightgrey;
   }
   .logo {
     margin-top: 1em;
@@ -41,13 +56,26 @@
   .view {
     position: absolute;
     top: 10px;
-    width: 60%;
+    width: 65%;
     font-family: "AlrightSansLT";
     font-size: 10px;
     float: right;
     margin-bottom: 1em;
     color: #ec5447;
-
+  }
+  .title {
+    font-family: "TiemposText";
+    font-size: 44px;
+    letter-spacing: -0.4px;
+    line-height: 1.02;
+    color: #0a273c;
+  }
+  .subtitle {
+    font-family: "AlrightSansLT";
+    width: 85%;
+    line-height: 1.21;
+    font-size: 14px;
+    color: #85939e;
   }
 }
 table {
@@ -60,23 +88,6 @@ table {
   width: 90%;
   margin: auto;
   padding-top: 1em;
-}
-.title {
-  font-family: "TiemposText";
-  font-size: 44px;
-  letter-spacing: -0.4px;
-  line-height: 1.02;
-  color: #0a273c;
-  text-align: left;
-}
-.subtitle {
-  font-family: "AlrightSansLT";
-  width: 85%;
-  line-height: 1.21;
-  font-size: 14px;
-  text-align: left;
-  color: #85939e;
-
 }
 .newletter-image {
   width: auto;
