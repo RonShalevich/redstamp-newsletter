@@ -6,26 +6,17 @@
   font-family: "AlrightSansLT";
   src: url('../fonts/Alright Sans/AlrightSans-Regular.otf');
 }
+@media screen and (min-width:616px){
+
 .newsletter {
   position: relative;
   max-width: 600px;
   margin: auto;
   border: 1px solid lightgrey;
 }
-table {
-  width: 100%;
-}
 .logo {
   float: left;
   margin-bottom: 1em;
-}
-.header-image {
-  margin-top: 1.5em;
-}
-.header{
-  width: 90%;
-  margin: auto;
-  padding-top: 1em;
 }
 .view {
   position: absolute;
@@ -36,6 +27,39 @@ table {
   float: right;
   margin-bottom: 1em;
   color: #ec5447;
+}
+
+
+}
+@media screen and (max-width:615px){
+  .newsletter {
+    width: 100%;
+  }
+  .logo {
+    margin-top: 1em;
+  }
+  .view {
+    position: absolute;
+    top: 10px;
+    width: 60%;
+    font-family: "AlrightSansLT";
+    font-size: 10px;
+    float: right;
+    margin-bottom: 1em;
+    color: #ec5447;
+
+  }
+}
+table {
+  width: 100%;
+}
+.header-image {
+  margin-top: 1.5em;
+}
+.header{
+  width: 90%;
+  margin: auto;
+  padding-top: 1em;
 }
 .title {
   font-family: "TiemposText";
@@ -341,16 +365,4 @@ table {
   margin-top: 0;
 }
 
-#circle:hover {
-  fill: blue;
-  stroke: lightblue;
-  stroke-width: 1px;
-  stroke-dasharray: 125;
-  stroke-dashoffset: -125;
-  stroke-linecap: butt;
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -ms-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-}
+#linkedin
