@@ -324,7 +324,6 @@ table {
   font-size: 3em;
   text-align: center;
 }
-/* @import "compass/css3"; */
 
 .flex-container {
   padding: 0;
@@ -364,5 +363,3 @@ table {
 .left {
   margin-top: 0;
 }
-
-#linkedin
