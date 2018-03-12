@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    @font-face {
+      font-family: "TiemposText";
+      src: url('../fonts/Tiempos Text/TiemposText-Regular.otf') format("truetype");
+    }
+    @font-face {
+      font-family: "AlrightSansLT";
+      src: url('../fonts/Alright Sans/AlrightSans-Regular.otf');
+    }
+    @media screen and (max-width:400px) {
+      img.large {
+        display: block;
+        width:400px !important;
+        height:auto !important;
+        max-width:100% !important;
+        margin: 0 auto;
+      }
+      img.small {
+        width:33% !important;
+        height:auto !important;
+        max-width:33% !important;
+      }
+    }
+
+    @media screen and (min-width:496px){
+      img.large {
+        display: block;
+        width: 100% !important;
+        height: auto;
+        max-width: 100% !important;
+        margin: 0 auto;
+      }
+      .newsletter {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid lightgrey;
+      }
+      .logo {
+        float: left;
+        margin-bottom: 1em;
+      }
+      .view {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        font-family: "AlrightSansLT";
+        font-size: 10px;
+        float: right;
+        margin-bottom: 1em;
+        color: #ec5447;
+      }
+      .title {
+        font-family: "TiemposText";
+        font-size: 44px;
+        letter-spacing: -0.4px;
+        line-height: 1.02;
+        color: #0a273c;
+        text-align: left;
+      }
+      .subtitle {
+        font-family: "AlrightSansLT";
+        width: 85%;
+        line-height: 1.21;
+        font-size: 14px;
+        text-align: left;
+        color: #85939e;
+      }
+    }
+    @media screen and (max-width:495px){
+      .newsletter {
+        width: 100%;
+        margin: auto;
+        border: 1px solid lightgrey;
+      }
+      .logo {
+        margin-top: 1em;
+      }
+      .view {
+        position: absolute;
+        top: 10px;
+        width: 65%;
+        font-family: "AlrightSansLT";
+        font-size: 10px;
+        float: right;
+        margin-bottom: 1em;
+        color: #ec5447;
+      }
+      .title {
+        font-family: "TiemposText";
+        font-size: 44px;
+        letter-spacing: -0.4px;
+        line-height: 1.02;
+        color: #0a273c;
+      }
+      .subtitle {
+        font-family: "AlrightSansLT";
+        width: 85%;
+        line-height: 1.21;
+        font-size: 14px;
+        color: #85939e;
+      }
+    }
+    table {
+      width: 100%;
+    }
+    .header-image {
+      margin-top: 1.5em;
+    }
+    .header{
+      width: 90%;
+      margin: auto;
+      padding-top: 1em;
+    }
+    .newletter-image {
+      width: auto;
+      float: right;
+      object-fit: contain;
+    }
+    .Bitmap {
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+    .main {
+      width: 100%;
+      background-color: #f7f8f9;
+    }
+    .content {
+      width: 90%;
+      margin: auto;
+
+    }
+    .traction {
+      font-family: "AlrightSansLT";
+      font-size: 10px;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 1.5em;
+      width: 100%;
+      color: #60cbe2;
+    }
+    .dash {
+      vertical-align: top;
+      width: 50%;
+      height: 1px;
+      opacity: 0.47;
+      background-color: #85939e;
+      margin-left: 2em;
+    }
+    .invisa-dash {
+      vertical-align: top;
+      width: 50%;
+      height: 1px;
+      opacity: 0.47;
+      background-color: #ffffff;
+      /* background-color: red; */
+      margin-left: 2em;
+    }
+    .conference {
+      font-family: "TiemposHeadline";
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+      color: #0a273c;
+      margin-left: 1em;
+    }
+    .traction-table {
+      width: 100%;
+      margin-left: 1.8em;
+    }
+    .traction-content {
+      width: 80%;
+      opacity: 0.73;
+      font-family: AlrightSansLT;
+      font-size: 14px;
+      line-height: 1.36;
+      letter-spacing: -0.1px;
+      text-align: left;
+      margin-left: 1.5em;
+      color: #0a273c;
+    }
+    .style-1 {
+      color: #ec5447;
+    }
+    .first-container {
+      background-color: #ffffff;
+    }
+    .tips-title {
+        font-family: TiemposText;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+        color: #0a273c;
+    }
+    .tips-subtitle {
+      font-family: AlrightSansLT;
+      font-size: 14px;
+      text-align: center;
+      margin-top:-1em;
+      margin-bottom: 2em;
+      color: #0a273c;
+    }
+    .tips-content {
+      width: 90%;
+      margin: auto;
+      background-color: #ffffff;
+      border: solid 1px #eceef0;
+    }
+    .tips-content-title {
+      width: 75%;
+      font-family: "AlrightSansLT";
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      text-align: left;
+      color: #0a273c;
+    }
+    .tips-content-content{
+      width: 75%;
+      font-family: "AlrightSansLT";
+      font-size: 12px;
+      text-align: left;
+      color: #85939e;
+    }
+    .more {
+      font-family: "AlrightSansLT";
+      font-size: 10px;
+      font-weight: 500;
+      text-align: left;
+      color: #60cbe2;
+    }
+    .blog-title {
+      font-family: "TiemposText";
+      font-size: 25px;
+      font-weight: 500;
+      text-align: center;
+      color: #0a273c;
+    }
+    .blog-subtitle {
+      font-family: "AlrightSansLT";
+      font-size: 14px;
+      text-align: center;
+      color: #0a273c;
+    }
+    .line {
+      width: 100%;
+      border: solid 1px #eceef0
+    }
+    .blog-cell {
+      width: 82%;
+      margin-left: 1.6em;
+      background-color: #ffffff;
+      border: solid 1px #eceef0;
+    }
+    .blog-post-title {
+      font-family: "TiemposHeadline";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.38;
+      text-align: left;
+      padding-left: 0.8em;
+      color: #0a273c;
+    }
+    .blog-post-content {
+      opacity: 0.73;
+      font-family: "AlrightSansLT";
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+      padding-left: 1em;
+      padding-right: 1em;
+      color: #0a273c;
+    }
+    .devider {
+      width: 100%;
+      height: 50px;
+      background-color: #ec5447;
+      }
+      .devider-text {
+      width: 100%;
+      height: 19px;
+      font-family: "AlrightSansLT";
+      font-size: 14px;
+      line-height: 1.36;
+      text-align: center;
+      padding-top: 1em;
+      color: #ffffff;
+      font-weight: 500;
+      }
+      .made {
+      height: 18px;
+      opacity: 0.5;
+      font-family: "AlrightSansLT";
+      font-size: 14px;
+      text-align: left;
+      color: #85939e;
+      font-weight: bold;
+    }
+    .social {
+      margin-left: 5em;
+    }
+    .footer-text1 {
+      height: 16px;
+      font-family: "AlrightSansLT";
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-align: right;
+      margin-right: 1em;
+      color: #0a273c;
+      letter-spacing: normal;
+    }
+    .footer-text2 {
+      height: 16px;
+      font-family: "AlrightSansLT";
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #0a273c;
+      letter-spacing: normal;
+    }
+    .copyright {
+      height: 16px;
+      opacity: 0.5;
+      font-family: "AlrightSansLT";
+      font-size: 12px;
+      text-align: center;
+      color: #85939e;
+    }
+    .copyright-img {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
+    .wrapper {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    .li {
+      background: tomato;
+      padding: 5px;
+      width: 200px;
+      height: 150px;
+      margin-top: 10px;
+
+      line-height: 150px;
+      color: white;
+      font-weight: bold;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .flex-container {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      -webkit-flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    .flex-item {
+      background: #ffffff;
+      width: 240px;
+      margin-top: 10px;
+
+      color: white;
+      font-weight: bold;
+      font-size: 3em;
+      text-align: center;
+    }
+    .flex-social {
+      background: #f7f8f9;
+      width: 240px;
+      margin-top: 10px;
+
+      color: white;
+      font-weight: bold;
+      font-size: 3em;
+      text-align: center;
+    }
+    .left {
+      margin-top: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="newsletter">
+      <div>
+        <div class="flex-container">
+          <div class="flex-item">
+            <img class="logo" src="https://s3-us-west-2.amazonaws.com/redstamp/img/rs-logo.svg" alt="">
+            <br><br>
+            <h2 style="margin:0; mso-line-height-rule:exactly;" class="title">Summer</br>Newsletter</h2>
+            <p class="subtitle">Lorem ipsum dolor sit amet proin gravida
+                amet lorem ipsum sum dolor sit.</p>
+          </div>
+          <div class="flex-item">
+            <p class="view">view in your browser</p>
+            <img class="header-image"src="https://s3-us-west-2.amazonaws.com/redstamp/img/newsletter-graphic-placeholder.png"
+                 srcset="img/newsletter-graphic-placeholder@2x.png 2x,
+               img/newsletter-graphic-placeholder@3x.png 3x"
+             class="NewsletterGraphicPlaceholder">
+          </div>
+        </div>
+        <br><br>
+
+        <img class="large" src="https://s3-us-west-2.amazonaws.com/redstamp/img/bitmap.png"
+             srcset="https://s3-us-west-2.amazonaws.com/redstamp/img/bitmap@2x.png 2x,
+                     https://s3-us-west-2.amazonaws.com/redstamp/img/bitmap@3x.png 3x">
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="first-container">
+            <br><br>
+            <table>
+              <col width = "20%">
+              <col width = "80%">
+              <tr>
+                <td class="top">
+                  <div class="invisa-dash">
+
+                  </div>
+                </td>
+                <td class="top">
+                  <div class="traction">
+                    <span>TRACTION</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <table>
+                <col width = "20%">
+                <col width = "80%">
+                <tr>
+                  <td class="top">
+                    <div class="dash">
+                    </div>
+                  </td>
+                  <td class="top">
+                    <div class="conference">
+                      <span>Traction Conference 2017</span>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+
+            <table>
+                <col width = "20%">
+                <col width = "80%">
+                <tr>
+                  <td>
+                    <div class="invisa-dash">
+                    </div>
+                  </td>
+                  <td>
+                    <p class="traction-content">
+                      Hi There! We’re still riding high on our incredible experience at this year’s Traction conference! We helped <span class="style-1">sponsor the event</span>, bringing some of the best minds in tech, SaaS, and growth to Vancouver for a few days of straight-up geeking out.<br><br>
+                      We made a lot of new friends and learned a lot of new things, and we’re already excited to make an even bigger splash next year!<br><br>
+                    </p>
+                  </td>
+                </tr>
+            </table>
+
+        <div class="tips-title">
+          <p>3 Tips for Action</p>
+        </div>
+        <div class="tips-subtitle">
+          <p>All the things you need to know lorem ipsum.</p>
+        </div>
+          <div class="tips-content">
+            <table class="traction-table">
+                <col width = "20%">
+                <col width = "80%">
+                <tr>
+                  <td>
+                    <img src="https://s3-us-west-2.amazonaws.com/redstamp/img/growth-icon.svg" alt="">
+                  </td>
+                  <td>
+                    <div class="tips-content-title">
+                      <p>Investing for brand growth</p>
+                    </div>
+                    <div class="tips-content-content">
+                      <p>Zapier is an incredibly versatile tool that integrates with all sorts of apps to make your life easier</p>
+                      <p class="more">read more</p>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+          </div>
+          <br>
+          <div class="tips-content">
+            <table class="traction-table">
+                <col width = "20%">
+                <col width = "80%">
+                <tr>
+                  <td>
+                    <img src="https://s3-us-west-2.amazonaws.com/redstamp/img/growth-icon.svg" alt="">
+                  </td>
+                  <td>
+                    <div class="tips-content-title">
+                      <p>Social Media Trends</p>
+                    </div>
+                    <div class="tips-content-content">
+                      <p>Zapier is an incredibly versatile tool that integrates with all sorts of apps to make your life easier</p>
+                      <p class="more">read more</p>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+          </div>
+          <br>
+          <div class="tips-content">
+            <table class="traction-table">
+                <col width = "20%">
+                <col width = "80%">
+                <tr>
+                  <td>
+                    <img src="https://s3-us-west-2.amazonaws.com/redstamp/img/growth-icon.svg" alt="">
+                  </td>
+                  <td>
+                    <div class="tips-content-title">
+                      <p>Social Media Trends</p>
+                    </div>
+                    <div class="tips-content-content">
+                      <p>Zapier is an incredibly versatile tool that integrates with all sorts of apps to make your life easier</p>
+                      <p class="more">read more</p>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+          </div>
+
+          <br><br>
+
+          <div class="line"></div>
+
+          <br><br>
+            <div class="blog">
+              <h1 style="margin:0; mso-line-height-rule:exactly;" class="blog-title">Your favourite blog posts</h1>
+              <p class="blog-subtitle">Our readers have found these post interesting this month.</p>
+              <br>
+
+              <div class="flex-container">
+                <div class="flex-item">
+                  <img class="large" src="https://s3-us-west-2.amazonaws.com/redstamp/img/rs-blog-illustration-traction.png"
+                       srcset="https://s3-us-west-2.amazonaws.com/redstamp/img/rs-blog-illustration-traction@2x.png 2x,
+                               https://s3-us-west-2.amazonaws.com/redstamp/img/rs-blog-illustration-traction@3x.png 3x"
+                       class="rs-blog-illustration-traction">
+                       <p class="traction">TRACTION</p>
+                       <h1 style="margin:0; mso-line-height-rule:exactly;" class="blog-post-title">Takeaway from Traction</h1>
+                       <p class = "blog-post-content">We learned so much from leading growth and business leaders at Traction Conf 2017. Here are our favourite Twitter takeaways from the two-day event.</p>
+
+                </div>
+                <div class="flex-item">
+                  <img class="large" src="https://s3-us-west-2.amazonaws.com/redstamp/img/rs-blog-automationmadeeasy-1024.png"
+                       srcset="https://s3-us-west-2.amazonaws.com/redstamp/img/rs-blog-automationmadeeasy-1024@2x.png 2x,
+                               https://s3-us-west-2.amazonaws.com/redstamp/img/rs-blog-automationmadeeasy-1024@3x.png 3x"
+                       class="rs-blog-automationmadeeasy_1024">
+                       <p class="traction">TRACTION</p>
+                       <h1 style="margin:0; mso-line-height-rule:exactly;" class="blog-post-title" >Sales Automation Made Easy</h1>
+                       <p class = "blog-post-content">We learned so much from leading growth and business leaders at Traction Conf 2017. Here are our favourite Twitter takeaways from the two-day event.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="devider">
+          <p class="devider-text">We now do CRO, let us optimize your landing pages – Find out more</p>
+        </div>
+        <br>
+        <div class="flex-container">
+          <div class="flex-social left">
+
+            <span class="made">Made in Canada.</span>
+            <img class="small" src="https://s3-us-west-2.amazonaws.com/redstamp/img/canada.svg" class="canada">
+
+          </div>
+          <div class="flex-social">
+            <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                <g fill="none" fill-rule="evenodd">
+                    <circle id="circle" cx="17.5" cy="17.5" r="17.5" fill="#ECEEF0"/>
+                    <path fill="#FFF" d="M10.95 25.261h2.985v-9.59H10.95zM12.443 14.362a1.728 1.728 0 1 1-.003-3.456 1.728 1.728 0 0 1 .003 3.456M25.097 25.261h-2.98v-4.664c0-1.111-.02-2.542-1.549-2.542-1.55 0-1.787 1.212-1.787 2.463v4.743h-2.977v-9.59h2.857v1.312h.04c.398-.755 1.371-1.55 2.82-1.55 3.018 0 3.576 1.986 3.576 4.569v5.26z"/>
+                </g>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                <g fill="none" fill-rule="evenodd">
+                    <circle id="circle" cx="17.5" cy="17.5" r="17.5" fill="#ECEEF0"/>
+                    <path fill="#FFF" d="M26.258 12.65a7.116 7.116 0 0 1-2.033.554 3.54 3.54 0 0 0 1.556-1.946 7.083 7.083 0 0 1-2.248.853A3.546 3.546 0 0 0 20.95 11c-1.957 0-3.54 1.575-3.54 3.518 0 .276.03.545.09.802a10.067 10.067 0 0 1-7.297-3.676 3.483 3.483 0 0 0-.48 1.77c0 1.22.661 2.297 1.612 2.929-.58-.02-1.569-.177-1.569-.44v.043a3.494 3.494 0 0 0 2.805 3.45 3.7 3.7 0 0 1-1.627.06 3.535 3.535 0 0 0 3.303 2.444A7.137 7.137 0 0 1 9 23.357c1.567 1 3.428 1.582 5.427 1.582 6.513 0 10.074-5.363 10.074-10.012 0-.153-.003-.305-.01-.455a7.195 7.195 0 0 0 1.767-1.822"/>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                <g fill="none" fill-rule="evenodd">
+                    <circle id="circle" cx="17.5" cy="17.5" r="17.5" fill="#ECEEF0"/>
+                    <path fill="#FFF" d="M21.377 11.679H19.86c-1.19 0-1.422.567-1.422 1.396v1.83h2.84l-.37 2.87h-2.47v7.357h-2.961v-7.358H13v-2.868h2.477v-2.113c0-2.456 1.499-3.793 3.688-3.793 1.05 0 1.95.079 2.214.114v2.565h-.002z"/>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                <g fill="none" fill-rule="evenodd">
+                    <circle id="circle" cx="17.5" cy="17.5" r="17.5" fill="#ECEEF0"/>
+                    <g fill="#FFF">
+                        <path d="M17.767 8.444c-2.376 0-2.673.01-3.607.054-.93.042-1.567.192-2.123.41a4.284 4.284 0 0 0-1.55 1.019 4.334 4.334 0 0 0-1.009 1.564c-.216.562-.364 1.204-.406 2.144-.043.942-.053 1.243-.053 3.642 0 2.398.01 2.699.053 3.64.042.94.19 1.583.406 2.145a4.334 4.334 0 0 0 1.01 1.564c.485.491.974.793 1.549 1.019.556.218 1.192.367 2.123.41.934.043 1.231.053 3.607.053 2.377 0 2.674-.01 3.608-.053.93-.043 1.567-.192 2.123-.41a4.284 4.284 0 0 0 1.55-1.019 4.334 4.334 0 0 0 1.009-1.564c.216-.562.364-1.204.406-2.144.043-.942.053-1.243.053-3.641 0-2.4-.01-2.7-.053-3.642-.042-.94-.19-1.582-.406-2.144a4.334 4.334 0 0 0-1.01-1.564 4.284 4.284 0 0 0-1.549-1.019c-.556-.218-1.192-.368-2.123-.41-.934-.043-1.231-.054-3.607-.054m0 1.592c2.335 0 2.612.009 3.535.051.853.04 1.316.183 1.624.304.409.16.7.352 1.006.661.306.309.496.603.654 1.015.12.312.263.78.302 1.64.042.932.05 1.211.05 3.57 0 2.358-.008 2.637-.05 3.568-.039.861-.181 1.329-.301 1.64a2.741 2.741 0 0 1-.655 1.016c-.306.309-.597.5-1.006.66-.308.121-.771.265-1.624.305-.923.042-1.2.051-3.535.051-2.337 0-2.613-.01-3.536-.051-.853-.04-1.316-.184-1.624-.304-.409-.16-.7-.352-1.006-.661a2.741 2.741 0 0 1-.654-1.016c-.12-.311-.263-.779-.302-1.64-.042-.93-.05-1.21-.05-3.568 0-2.359.008-2.638.05-3.57.039-.86.181-1.328.302-1.64.158-.412.348-.706.654-1.015.306-.31.597-.5 1.006-.66.308-.122.771-.265 1.624-.305.923-.042 1.2-.051 3.536-.051"/>
+                        <path d="M17.767 20.22c-1.61 0-2.916-1.318-2.916-2.943 0-1.627 1.306-2.945 2.916-2.945 1.611 0 2.917 1.318 2.917 2.945 0 1.625-1.306 2.943-2.917 2.943m0-7.479c-2.48 0-4.492 2.03-4.492 4.536 0 2.504 2.011 4.535 4.492 4.535 2.482 0 4.493-2.03 4.493-4.535 0-2.505-2.011-4.536-4.493-4.536M23.487 12.562c0 .585-.47 1.06-1.05 1.06-.58 0-1.05-.475-1.05-1.06 0-.585.47-1.06 1.05-1.06.58 0 1.05.475 1.05 1.06"/>
+                    </g>
+                </g>
+            </svg>
+          </div>
+        </div>
+
+          <br>
+          <div class="line"> </div> <br>
+
+          <div class="footer">
+            <table>
+              <col width="48%">
+              <col width="52%">
+              <tr>
+                <td>
+                  <div class="footer-text1">
+                    <p>Unsubscribe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="footer-text2">
+                    <p>View in browser</p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <p class="copyright">© 2011-2017 Red Stamp Agency Inc. All rights reserved.</p>
+            <br>
+            <div class="copyright-img">
+              <img class="small" src="https://s3-us-west-2.amazonaws.com/redstamp/img/rs-logo-footer.svg" alt="">
+            </div>
+          </div>
+          <br><br><br>
+
+
+      </div>
+    </div>
+  </body>
+</html>
